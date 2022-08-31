@@ -1,9 +1,14 @@
+import CartWidget from "./CartWidget";
+
 const NavBar = () => {
     return (
-    <div class="navbar">
-        <div class="title">Franca Figueroa</div>
-        <div class="navbar-links">
-        <ul>
+
+    <div className="navbar">
+
+        <div className="title">Franca Figueroa</div>
+        <div className="navbar-links">
+        <nav>
+            <ul>
             <li>
                 <a href="#">Home</a>
             </li>
@@ -13,9 +18,14 @@ const NavBar = () => {
             <li>
                 <a href="#">Nosotros</a>
             </li>
+            <li>
+            <a href="#"><CartWidget/></a>
+            </li>
         </ul>
+        </nav>
         </div>
     </div>
+    
     );
 }
 export default NavBar;

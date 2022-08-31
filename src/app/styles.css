@@ -8,14 +8,16 @@ body{
 }
 
 .navbar {
+    font-family: sans-serif ;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: black;
     color: white;
 }
 
 .title{
+    width: 100%;
     font-size: 1.5rem;
     margin: .5rem;
 }
@@ -25,6 +27,7 @@ body{
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
 .navbar-links li a{
@@ -35,11 +38,31 @@ body{
     display: block;
 }
 
+.navbar-links li:last-child{
+    background-color: rgba(255, 255, 0, .6)
+}
+
+.navbar-links li:last-child:hover{
+    background-color: yellow;
+}
+
+
+.carrito{
+    height: 40px;
+}
+
+.carrito img{
+    height: 100%;
+}
 .navbar-links li:hover{
     background-color: #555;
 }
 
 @media (max-width: 400px) {
+
+    .title{
+        text-align: center;
+    }
 
     .navbar-links{
         width: 100%;
@@ -66,4 +89,10 @@ body{
     .navbar-links.active{
         display: flex;
     }
+}
+
+.titulo{
+    font-size: 2rem;
+    text-align: center;
+    margin: 3rem;
 }
