@@ -1,14 +1,14 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
 .navbar {
-    font-family: sans-serif ;
+    font-family: sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,13 +16,13 @@ body{
     color: white;
 }
 
-.title{
+.title {
     width: 100%;
     font-size: 1.5rem;
     margin: .5rem;
 }
 
-.navbar-links ul{
+.navbar-links ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@ body{
     align-items: center;
 }
 
-.navbar-links li a{
+.navbar-links li a {
     list-style-type: none;
     text-decoration: none;
     color: white;
@@ -38,33 +38,34 @@ body{
     display: block;
 }
 
-.navbar-links li:last-child{
+.navbar-links li:last-child {
     background-color: rgba(255, 255, 0, .6)
 }
 
-.navbar-links li:last-child:hover{
+.navbar-links li:last-child:hover {
     background-color: yellow;
 }
 
 
-.carrito{
+.carrito {
     height: 40px;
 }
 
-.carrito img{
+.carrito img {
     height: 100%;
 }
-.navbar-links li:hover{
+
+.navbar-links li:hover {
     background-color: #555;
 }
 
 @media (max-width: 400px) {
 
-    .title{
+    .title {
         text-align: center;
     }
 
-    .navbar-links{
+    .navbar-links {
         width: 100%;
     }
 
@@ -78,7 +79,7 @@ body{
         flex-direction: column;
     }
 
-    .navbar-links li{
+    .navbar-links li {
         text-align: center;
     }
 
@@ -86,13 +87,46 @@ body{
         padding: .5rem 1rem;
     }
 
-    .navbar-links.active{
+    .navbar-links.active {
         display: flex;
     }
 }
 
-.titulo{
+.titulo {
     font-size: 2rem;
     text-align: center;
     margin: 3rem;
+}
+
+.contenedor-button {
+    text-align: center;
+}
+
+.button {
+    margin: 25px;
+}
+
+.button-rys {
+    padding: 10px 20px;
+    margin: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.button-rys:hover {
+    background-color: orange;
+}
+
+.button-agregar {
+    background-color: rgba(255, 255, 0, .6);
+    border: 10px;
+    padding: 20px 82px;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.button-agregar:hover {
+    background-color: yellow;
 }
