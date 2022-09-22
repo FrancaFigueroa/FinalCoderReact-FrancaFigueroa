@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ItemCount from './ItemCount';
+
 import ItemList from './ItemList';
 import arboldejade from '../assets/img/arboldejade.jpg';
 import areca from '../assets/img/areca.jpg';
@@ -40,13 +40,11 @@ const ItemListContainer = ({ greeting }) => {
 
 
 
-  const onAdd = (cantidad) => {
-    alert(`${cantidad} productos agregados!`)
-  }
+
   return (
     <>
       <div className="titulo">Bienvenidos a {greeting}</div>
-      <ItemCount stock={5} initial={0} onAdd={onAdd} />
+
       <ItemList data={data} />
     </>
   );
