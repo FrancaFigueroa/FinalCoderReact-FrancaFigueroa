@@ -1,3 +1,4 @@
+import React from 'react';
 import NavBar from "./components/NavBar";
 import './app/styles.css';
 import ItemListContainer from "./components/ItemListContainer";
@@ -5,8 +6,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer.js";
 import CartWidget from "./components/CartWidget";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-
-const App = () => {
+function App() {
   return (
     <>
       <BrowserRouter>
@@ -17,6 +17,7 @@ const App = () => {
           <Route path='/detalle/:detalleId' element={<ItemDetailContainer />} />
           <Route path='/carrito' element={<CartWidget />} />
         </Routes>
+
       </BrowserRouter>
     </>
   );

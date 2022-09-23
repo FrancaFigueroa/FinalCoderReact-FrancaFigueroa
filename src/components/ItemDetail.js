@@ -10,21 +10,18 @@ export const ItemDetail = ({ data }) => {
         setGotoCart(true);
     }
     return (
-        <Link to={`/detalle/${data.id}`} className="detalle-producto">
-            <div className="contenedor-productos">
-                <p className="tituloProducto">{data.title}</p>
-                <p>Precio: ${data.precio}</p>
-                <img src={data.img} alt="planta" className="imagenPlanta" />
-                <p>Stock: {data.stock}</p>
-                <button className="btn-card">{data.button}</button>
-                {
-                    goTocart
-                        ? <link to='/carrito'>Terminar compra</link>
-                        : <ItemCount stock={5} initial={0} onAdd={onAdd} />}
 
-
-            </div>
-        </Link>
+        <div className="contenedor-productos">
+            <p className="tituloProducto">{data.title}</p>
+            <p>Precio: ${data.precio}</p>
+            <img src={data.img} alt="planta" className="imagenPlanta" />
+            <p>Stock: {data.stock}</p>
+            <button className="btn-card">{data.button}</button>
+            {
+                goTocart
+                    ? <Link to='/carrito'>Terminar compra</Link>
+                    : <ItemCount stock={5} initial={0} onAdd={onAdd} />}
+        </div>
     );
 }
 
