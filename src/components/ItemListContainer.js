@@ -36,6 +36,7 @@ const ItemListContainer = ({ greeting }) => {
     } else {
       getData.then(res => setData(res))
     }
+
   }, [categoriaId])
 
 
