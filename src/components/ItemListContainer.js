@@ -27,7 +27,6 @@ const ItemListContainer = ({ greeting }) => {
       );
     } else {
       getDocs(queryCollection).then((res) => {
-        console.log(res);
         setData(
           res.docs.map((planta) => ({ id: planta.id, ...planta.data() }))
         );

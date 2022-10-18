@@ -14,7 +14,6 @@ export const ItemDetailContainer = () => {
 
         getDoc(queryDoc)
             .then(res => {
-                console.log(res.data())
                 setData({ id: res.id, ...res.data() })
             })
     }, [detalleId])

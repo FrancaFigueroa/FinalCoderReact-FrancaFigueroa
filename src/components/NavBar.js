@@ -6,7 +6,7 @@ const NavBar = () => {
 
         <div className="navbar">
 
-            <div className="title">Franca Figueroa</div>
+            <div className="title">Plantasia</div>
             <div className="navbar-links">
                 <nav>
                     <ul>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-const ItemCount = ({ item, initial, onAdd, stock }) => {
+const ItemCount = ({ item, initial, onAdd }) => {
     const [contador, setContador] = useState(() => initial ? initial : 1)
     const sumar = () => {
-        if (contador === stock) return
+        if (contador === item.stock) return
         setContador(contador + 1)
     }
     const restar = () => {

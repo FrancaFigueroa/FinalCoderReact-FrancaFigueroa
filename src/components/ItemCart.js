@@ -7,15 +7,14 @@ const ItemCart = ({ product }) => {
 
     return (
         <div className="contenedor-productos">
-            {console.log(product)}
             <p className="tituloProducto">{product.title}</p>
             <p>Precio: ${product.price}</p>
             <img src={product.image} alt="planta" className="imagenPlanta" />
-            <p>Stock: {product.stock}</p>
+            <p>Cantidad: {product.quantity}</p>
             <p>Subtotal= $ {product.quantity * product.price}</p>
             <button onClick={() => removeProduct(product.id)}>Eliminar</button>
         </div>
     )
 }
 
-export default ItemCart
+export default ItemCart;

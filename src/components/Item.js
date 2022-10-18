@@ -1,26 +1,16 @@
-import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
 import React from 'react';
-import { useCartContext } from "../CartContext";
 
-const Item = ({ info }) => {
-    const { addProduct } = useCartContext();
+const Item = ({ product }) => {
     return (
         <div className="contenedor-productos">
-            <Link to={`/detalle/${info.id}`} className="detalle-producto">
-                <p className="tituloProducto">{info.title}</p>
-                <p>Precio: ${info.price}</p>
-                <img src={info?.image} alt="planta" className="imagenPlanta" />
-                <p>Stock: {info.stock}</p>
-                <button className="btn-card">{info.button}</button>
+            <p className="tituloProducto">{product.title}</p>
+            <p>Precio: ${product.price}</p>
+            <img src={product?.image} alt="planta" className="imagenPlanta" />
+            <p>Stock: {product.stock}</p>
+            <Link to={`/detalle/${product.id}`} className="detalle-producto">
+                <button className="btn-card">Ver mas</button>
             </Link>
-            <ItemCount
-                temCount
-                item={info}
-                initial={0}
-                onAdd={(item, contador) => {
-                    addProduct(item, contador);
-                }} />
         </div>
 
     );

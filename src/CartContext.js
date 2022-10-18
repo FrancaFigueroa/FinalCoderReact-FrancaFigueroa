@@ -10,11 +10,13 @@ const CartProvider = ({ children }) => {
         let newCart = [...cart];
         if (isInCart(item.id)) {
             newCart = newCart.map((product) => {
-                if (product.id === item.id) {
-                    return { ...item, quantity: newQuantity + item.quantity };
+                const newValue = product.quantity + newQuantity
+                if (product.id === item.id && product.stock >= newValue) {
+                    product.quantity += newQuantity;
                 }
                 return product;
             });
+            return setCart(newCart)
         }
         newCart.push({ ...item, quantity: newQuantity });
         setCart(newCart);
