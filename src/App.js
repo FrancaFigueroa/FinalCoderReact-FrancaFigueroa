@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 import './app/styles.css';
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer.js";
-import CartWidget from "./components/CartWidget";
+import Cart from "./components/Cart";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartProvider from './CartContext';
 
@@ -18,7 +18,7 @@ function App() {
             <Route path="/" element={<ItemListContainer greeting="React Js" />} />
             <Route path='/categoria/:categoriaId' element={<ItemListContainer greeting="React Js" />} />
             <Route path='/detalle/:detalleId' element={<ItemDetailContainer />} />
-            <Route path='/carrito' element={<CartWidget />} />
+            <Route path='/carrito' element={<Cart />} />
           </Routes>
         </CartProvider>
 

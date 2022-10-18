@@ -1,19 +1,28 @@
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import { useCartContext } from "../CartContext";
 
 const Item = ({ info }) => {
+    const { addProduct } = useCartContext();
     return (
-        <Link to={`/detalle/${info.Id}`} className="detalle-producto">
-            <div className="contenedor-productos">
+        <div className="contenedor-productos">
+            <Link to={`/detalle/${info.id}`} className="detalle-producto">
                 <p className="tituloProducto">{info.title}</p>
-                <p>Precio: ${info.precio}</p>
-                <img src={info.img} alt="planta" className="imagenPlanta" />
+                <p>Precio: ${info.price}</p>
+                <img src={info?.image} alt="planta" className="imagenPlanta" />
                 <p>Stock: {info.stock}</p>
                 <button className="btn-card">{info.button}</button>
-                <ItemCount />
-            </div>
-        </Link>
+            </Link>
+            <ItemCount
+                temCount
+                item={info}
+                initial={0}
+                onAdd={(item, contador) => {
+                    addProduct(item, contador);
+                }} />
+        </div>
+
     );
 }
 

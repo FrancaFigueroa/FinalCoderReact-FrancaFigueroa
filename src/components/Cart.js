@@ -16,7 +16,6 @@ const Cart = () => {
         },
         items: cart.map(planta => ({ id: planta.id, title: planta.title, price: planta.price, quantity: planta.quantity })),
         total: totalPrice(),
-
     }
 
     const handleClick = () => {
@@ -37,7 +36,7 @@ const Cart = () => {
     return (
         <>
             {
-                Cart.map(product => <ItemCart key={product.id} product={product} />)
+                cart.map(product => <ItemCart key={product.id} product={product} />)
             }
             <p>total: ${totalPrice()}</p>
             <button onClick={handleClick}>generar orden</button>

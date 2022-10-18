@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-const ItemCount = ({ stock, initial, onAdd }) => {
-    const [contador, setContador] = useState(initial ?? 0)
+const ItemCount = ({ item, initial, onAdd, stock }) => {
+    const [contador, setContador] = useState(() => initial ? initial : 1)
     const sumar = () => {
         if (contador === stock) return
         setContador(contador + 1)
@@ -18,11 +18,11 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                 <button className="button-rys" onClick={sumar}>+</button>
             </div>
             <button className="button-agregar" onClick={() => {
-                onAdd(contador)
+                onAdd(item, contador)
                 setContador(initial)
             }}>Agregar</button>
         </div>
     )
 }
 
-export default ItemCount
+export default ItemCount;

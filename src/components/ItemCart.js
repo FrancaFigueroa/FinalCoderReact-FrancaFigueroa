@@ -7,10 +7,11 @@ const ItemCart = ({ product }) => {
 
     return (
         <div className="contenedor-productos">
-            <p className="tituloProducto">{data.title}</p>
-            <p>Precio: ${data.precio}</p>
-            <img src={data.img} alt="planta" className="imagenPlanta" />
-            <p>Stock: {data.stock}</p>
+            {console.log(product)}
+            <p className="tituloProducto">{product.title}</p>
+            <p>Precio: ${product.price}</p>
+            <img src={product.image} alt="planta" className="imagenPlanta" />
+            <p>Stock: {product.stock}</p>
             <p>Subtotal= $ {product.quantity * product.price}</p>
             <button onClick={() => removeProduct(product.id)}>Eliminar</button>
         </div>
