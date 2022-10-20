@@ -40,7 +40,7 @@ export default function FormularioCheckout({ order, generarOrden }) {
             {!isSubmitted && <input type="submit" value={"Comprar"} />}
             {idCompra && (
                 <p>
-                    Gracias por su compra, ha obtenido el numero de ticket: {idCompra}
+                    Gracias por su compra, su número de seguimiento es: {idCompra}
                 </p>
             )}
         </form>

@@ -31,16 +31,12 @@ const CartProvider = ({ children }) => {
             return acumulador + productoActual.quantity;
         }, 0);
     };
-    //almacenar carrito
-
-    //limpiar carrito
     const clearCart = () => setCart([]);
 
-    //saber su un producto esta en el carrito
     const isInCart = (id) => {
         return cart.find((prod) => prod.id === id) ? true : false;
     };
-    //borrar carrito
+
     const removeProduct = (id) =>
         setCart(cart.filter((product) => product.id !== id));
 

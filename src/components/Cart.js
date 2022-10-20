@@ -29,7 +29,7 @@ const Cart = () => {
         return (
             <>
                 <p>No hay elementos en el carrito</p>
-                <Link to="/">hacer compras</Link>
+                <Link to="/">Hacer compras</Link>
             </>
         );
     }

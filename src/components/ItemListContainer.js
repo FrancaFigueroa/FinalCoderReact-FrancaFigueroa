@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import {
-  getFirestore,
   collection,
   getDocs,
   query,
@@ -37,7 +36,6 @@ const ItemListContainer = ({ greeting }) => {
   return (
     <>
       <div className="titulo">Bienvenidos a {greeting}</div>
-      {console.log(data)}
       <ItemList data={data} />
     </>
   );
